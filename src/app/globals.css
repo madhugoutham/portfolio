@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
+  /* Custom colors for Madhu's portfolio */
+  :root {
+    --teal: 180 41% 48%;
+    --dark-blue: 240 25% 8%;
+    --deep-purple: 260 20% 15%;
+    --gold: 36 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-white;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.timeline {
+  @apply relative border-l-2 border-primary;
+}
+
+.timeline-circle {
+  @apply absolute -left-[11px] mt-1.5 h-5 w-5 rounded-full bg-white text-center font-bold text-black;
+}
+
+.card-skill {
+  @apply flex flex-col items-center justify-center p-6 rounded-lg bg-secondary transition-all duration-300 hover:translate-y-[-5px];
+}
+
+.section-heading {
+  @apply text-3xl md:text-4xl font-bold mb-8;
+}
+
+.tag {
+  @apply text-xs text-primary mt-2;
+}
+
+/* Background pattern for hero section */
+.hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23292536' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 20.83l2.83-2.83 1.41 1.41L1.41 22H0v-1.17zM0 3.07l2.83-2.83 1.41 1.41L1.41 4.24H0V3.07zm10 18.34l2.83-2.83 1.41 1.41-2.83 2.83H10v-1.41zm0-17.76l2.83-2.83 1.41 1.41-2.83 2.83H10V3.65zm10 18.34l2.83-2.83 1.41 1.41-2.83 2.83H20v-1.41zm0-17.76l2.83-2.83 1.41 1.41-2.83 2.83H20V4.23zM30 21.41l2.83-2.83 1.41 1.41-2.83 2.83H30v-1.41zm0-17.76l2.83-2.83 1.41 1.41-2.83 2.83H30V3.65z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09070f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e2a48;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3861;
+}
